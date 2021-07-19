@@ -1,14 +1,15 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
-function ItemListContainer({greeting,user}) {
+function ItemListContainer() {
     //desestructuring
+   const  handleCount=(cant)=>{
+        alert(`Sumaste al carrito ${cant} productos`);
+    }
     return (
-        <div className='banner'>
-            <h1  className='greeting'><em>{greeting}</em></h1>
-            <h2 className='user'>{user}</h2>
-            
-        
-            
+        <div >
+        <h1>Bienvenido a mi Tienda</h1>
+            <ItemCount stock={5} initial={1} onAdd={handleCount}/>    
         </div>
     )
 }
