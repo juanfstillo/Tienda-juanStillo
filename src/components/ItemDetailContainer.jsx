@@ -1,14 +1,9 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import ItemCount from './ItemCount'
-import { useState,useEffect } from 'react';
-import ItemList from './ItemList';
+import ItemList from './ItemList'
 
-const  handleCount=(cant)=>{
-    alert(`Sumaste al carrito ${cant} productos`);
 
-    
-}
-function ItemListContainer() {
+function ItemDetailContainer() {
     const [itemList, setItemList] = useState([])    
     useEffect(() => {
         const items=
@@ -80,7 +75,7 @@ function ItemListContainer() {
             if(status===200){
     
                 setTimeout(()=>{
-                    resuelto(items)
+                    resuelto(items.filter(item => item.id === 1))
                 },2000)
             }else{
                 rechazado('rechazado')
@@ -101,14 +96,13 @@ function ItemListContainer() {
     console.log(itemList)
     return (
         <div >
-        <h1>Bienvenido a mi Tienda</h1>
-            <ItemCount stock={5} initial={1} onAdd={handleCount}/>    
+        <h1>Soy Item Detail Container</h1>
             <ul>
             <ItemList itemList={itemList} />
           </ul>
 
         </div>
     )
-    
 }
-export default ItemListContainer
+
+export default ItemDetailContainer
