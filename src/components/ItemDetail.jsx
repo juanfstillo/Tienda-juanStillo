@@ -10,7 +10,7 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem'
 
 function ItemDetail ( { itemList } ) 
 {    return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '16rem' }}>
     <Card.Img variant="top" src={itemList[0]?.img} />
     <Card.Body>
       <Card.Title>{itemList[0]?.name} {itemList[0]?.characteristic}</Card.Title>
