@@ -21,3 +21,6 @@ para correr el proyecto, que estará disponible en http://localhost:3000
 Dependencias
 Uso de Bootstrap para dar formato a la aplicación.
 Uso de React Router Dom para la navegación
+
+Link para ver la demo:
+https://drive.google.com/file/d/1Uoo_Td71OWPc49IYWg2zvCJfM7pXqplu/view?usp=sharing
